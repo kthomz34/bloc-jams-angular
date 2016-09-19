@@ -84,7 +84,6 @@
         SongPlayer.play = function(song) {
             song = song || SongPlayer.currentSong;
             if (SongPlayer.currentSong !== song) {
-                
                 setSong(song);
                 playSong(song);
             } else if (SongPlayer.currentSong === song) {
@@ -109,7 +108,6 @@
         /**
         * @function previous
         * @desc Gets previous song
-        * @param {Object} song
         */
         
         SongPlayer.previous = function() {
@@ -124,6 +122,11 @@
                 playSong(song);
             }
         };
+        
+        /**
+        * @function next
+        * @desc Gets next song
+        */
         
         SongPlayer.next = function() {
             var currentSongIndex = getSongIndex(SongPlayer.currentSong);
